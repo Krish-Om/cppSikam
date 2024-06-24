@@ -4,12 +4,12 @@
 
 using namespace std;
 
-int add(int a, int b){
-    return a+b;
+inline void add(int a, int b){
+     cout << a+b << endl;
 }
 
 int main(){
     cout << "Using inline function:"<<endl;
-    cout << add(2,3) << endl;
+    add(2,3);
     return 0;
 }
