@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int add(int a, int b){
+inline int add(int a, int b){
     return a+b;
 }
 
