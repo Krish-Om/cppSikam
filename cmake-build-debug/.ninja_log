@@ -1,0 +1,12 @@
+# ninja log v6
+1	552	1719218243983088151	CMakeFiles/collab.dir/Lab1/q2.cpp.o	299bdd5ca16acb72
+2	570	1719218243984088164	CMakeFiles/collab.dir/Lab1/q3.cpp.o	6551134f7cd54b2d
+1	593	1719218243983088151	CMakeFiles/collab.dir/krishom/first.cpp.o	8761a67f5e9fad9a
+593	608	1719218244575095398	CMakeFiles/collab.dir/Lab3/q2.cpp.o	1bd21a1bb2f09396
+608	622	1719218244590095582	CMakeFiles/collab.dir/Lab3/q3.cpp.o	e806a5b52fe3d62
+1	626	1719218243983088151	CMakeFiles/collab.dir/Lab1/q1.cpp.o	869fb61b0406d910
+622	638	1719218244604095753	CMakeFiles/collab.dir/Lab3/q4.cpp.o	137c3d50d2afe904
+2	669	1719218243984088164	CMakeFiles/collab.dir/Lab1/q5.cpp.o	15e95a96e6242cb0
+2	714	1719218243984088164	CMakeFiles/collab.dir/Lab1/q4.cpp.o	3eac8fa169cf0149
+553	937	1719218244535094908	CMakeFiles/collab.dir/first.cpp.o	4c307059aaa56d9b
+570	961	1719218244552095116	CMakeFiles/collab.dir/Lab3/q1.cpp.o	7c2554a9b3e216db

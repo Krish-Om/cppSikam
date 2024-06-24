@@ -10,4 +10,8 @@ add_executable(collab
         Lab1/q3.cpp
         Lab1/q4.cpp
         Lab1/q5.cpp
-        first.cpp)
+        first.cpp
+        Lab3/q1.cpp
+        Lab3/q2.cpp
+        Lab3/q3.cpp
+        Lab3/q4.cpp)
