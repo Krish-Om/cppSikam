@@ -4,8 +4,10 @@
 
 using namespace std;
 
-inline void add(int a, int b){
-     cout << a+b << endl;
+
+inline int add(int a, int b){
+    return a+b;
+
 }
 
 int main(){
