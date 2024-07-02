@@ -74,9 +74,10 @@ void ComplementOf(int set[])
     // Assuming the universal set U is predefined
     int U[SIZE], complement[SIZE];
     printf("Define the universal set U:\n");
-    int usize;
+    int usize; //assuming large size of U set
     printf("Enter the size of the universal set U:");
     scanf("%d", &usize);
+    printf("Enter the elements of the universal set U:\n");
     takeInput(U, usize);
 
     int complSize = 0;
@@ -90,7 +91,6 @@ void ComplementOf(int set[])
         }
     }
     complement[0] = complSize;
-    printf("\nComplement of the set is:");
     displaySet(complement);
 }
 
@@ -103,7 +103,7 @@ void differenceOfSet(int setX[], int setY[]){
         }
     }
     diffSet[0] = diffSize;
-    printf("\nDifference of set is: ");
+    printf("\nDifference of set A and B is: ");
     displaySet(diffSet);
 }
 
@@ -131,8 +131,15 @@ int main()
     Intersection(setA, setB);
     printf("\n");
 
+    differenceOfSet(setA, setB);
+
+    printf("\n\n");
+    printf("Complement of set A\n");
     ComplementOf(setA);
 
-    differenceOfSet(setA, setB);
+    printf("\n\n");
+    printf("Complement of set B\n");  
+    ComplementOf(setB);
+
     return 0;
 }
