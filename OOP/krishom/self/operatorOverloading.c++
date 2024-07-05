@@ -48,8 +48,8 @@ int main()
     Complex A(2, 3), B(4, 5);
     Complex C = A + B;
     Complex D = A - B;
-               //(A-) -> function call
-// B as argument
+            //[ A - ] -> function call
+             //B as argument
     C.printt();
     D.printt();
 

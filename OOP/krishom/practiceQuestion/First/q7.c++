@@ -1,0 +1,1 @@
+// Write a C++program to input time in second convert it into hour, minute and second.
