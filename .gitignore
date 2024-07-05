@@ -1,7 +1,7 @@
 *.out
 *.exe
 .vscode
-!*.o
-!*.so
+*.o
+*.so
 .idea
 .cmake-build-debug
