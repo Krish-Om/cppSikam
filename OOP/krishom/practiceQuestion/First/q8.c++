@@ -1,1 +1,0 @@
-// Write a C++program that reads marks in five subjects and finds total marks, percentage.
