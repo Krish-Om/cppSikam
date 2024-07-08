@@ -123,6 +123,19 @@ public:
     }
 };
 
+class quad{
+    private : 
+        int a,b,c;
+    public:
+        quad(int n1,int n2,int n3){
+            a=n1;
+            b=n2;
+            c=n3;
+            
+        }
+
+        void 
+};
 int main()
 {
     // Calculator c;
