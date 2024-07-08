@@ -7,6 +7,8 @@
 
 #include <iostream>
 #include <iomanip>
+#include <math.h>
+
 using namespace std;
 
 class Calculator
@@ -99,19 +101,22 @@ private:
 public:
     Subjects()
     {
-        total =0;
+        total = 0;
         run();
     }
-    void run(){
+    void run()
+    {
         takeInput();
-        for(int i=0;i<5;i++){
+        for (int i = 0; i < 5; i++)
+        {
             total += marks[i];
         }
 
-        percentage = (total/500.0) * 100;
+        percentage = (total / 500.0) * 100;
 
-        cout << "\nTotal Obtained : \n" << total;
-        cout <<"\n Percentage : " << percentage;
+        cout << "\nTotal Obtained : \n"
+             << total;
+        cout << "\n Percentage : " << percentage;
     }
     void takeInput()
     {
@@ -123,23 +128,53 @@ public:
     }
 };
 
-class quad{
-    private : 
-        int a,b,c;
-    public:
-        quad(int n1,int n2,int n3){
-            a=n1;
-            b=n2;
-            c=n3;
-            
-        }
+class quad
+{
+private:
+    int a, b, c;
 
-        void 
+public:
+    quad(int n1, int n2, int n3)
+    {
+        a = n1;
+        b = n2;
+        c = n3;
+        calculateRoot();
+    }
+
+    void calculateRoot()
+    {
+        int d = b * b - (4 * a * c);
+        if (d == 0)
+        {
+            
+            float r = -b / 2 * a;
+            cout << "roots are same: " << setprecision(2)<<r;
+        }
+        else if (d > 0)
+        {
+            setprecision(2);
+            float r1 = ((-b + sqrt(d)) / 2 * a);
+            float r2 = ((-b - sqrt(d)) / 2 * a);
+            cout << "Roots are :\n "<<setprecision(2) << r1 << " " << r2;
+        }
+        else
+        {
+            setprecision(2);
+            float real = b / 2 * a;
+            float imag = sqrt(-d) / 2 * a;
+            cout << "imaginary roots are : \n"
+                << setprecision(2) << real << "+ i" << imag;
+            cout << "\n";
+            cout << setprecision(2)<< real << "- i" << imag;
+        }
+    }
 };
 int main()
 {
     // Calculator c;
     // timeConvert t(500);
     // Subjects s;
+    quad(1,2,3);
     return 0;
 }
