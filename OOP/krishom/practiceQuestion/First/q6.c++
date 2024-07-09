@@ -147,16 +147,16 @@ public:
         int d = b * b - (4 * a * c);
         if (d == 0)
         {
-            
+
             float r = -b / 2 * a;
-            cout << "roots are same: " << setprecision(2)<<r;
+            cout << "roots are same: " << setprecision(2) << r;
         }
         else if (d > 0)
         {
             setprecision(2);
             float r1 = ((-b + sqrt(d)) / 2 * a);
             float r2 = ((-b - sqrt(d)) / 2 * a);
-            cout << "Roots are :\n "<<setprecision(2) << r1 << " " << r2;
+            cout << "Roots are :\n " << setprecision(2) << r1 << " " << r2;
         }
         else
         {
@@ -164,17 +164,33 @@ public:
             float real = b / 2 * a;
             float imag = sqrt(-d) / 2 * a;
             cout << "imaginary roots are : \n"
-                << setprecision(2) << real << "+ i" << imag;
+                 << setprecision(2) << real << "+ i" << imag;
             cout << "\n";
-            cout << setprecision(2)<< real << "- i" << imag;
+            cout << setprecision(2) << real << "- i" << imag;
         }
     }
 };
+void leapYear()
+{
+    int year;
+    cout << "Enter a year : " << endl;
+    cin >> year;
+    cout << endl;
+    if ((year % 4 == 0 && year % 100 != 0) || year %400 == 0)
+    {
+        cout << year << " : is a leap year";
+    }
+    else
+    {
+        cout << "not a leap year";
+    }
+}
 int main()
 {
     // Calculator c;
     // timeConvert t(500);
     // Subjects s;
-    quad(1,2,3);
+    // quad(1,2,3);
+    leapYear();
     return 0;
 }
