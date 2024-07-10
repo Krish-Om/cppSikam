@@ -1,10 +1,12 @@
 #include <iostream>
+#include<string>
 using namespace std;
 
+//data conversion from basic to user-defined 
 class Time{
     private:
-        int hours;
-        int min;
+        float hours;
+        float min;
     public:
         Time(){
             hours =0;
@@ -12,11 +14,20 @@ class Time{
         }
 
         Time(int t){
-            hours = t + 10;
-            min = t + 5;
+            hours = t/60;
+            min = t/60;
         }
 
 
+        // conversion operator : to integer type
+        operator int(){
+            return hours;
+        }
+
+
+        operator string(){
+            return "Conversion of object to string";
+        }
     void display(){
         cout << hours << endl << min;
     }
@@ -32,5 +43,15 @@ int main(){
     Time t2 = 45; // This demonstrates the implicit data conversion of basic to user-defined
     //data type
     t1.display();
+
+
+    // From class to primitive data type
+    Time t4(10000.34);
+    int val = t4;// the data conversion occurs in this line 
+    // the overloaded conversion operator gets called and implicitly converts the data
+    cout << val  << '\n';
+    string str = t4;
+    cout << str;
+
 return 0;
 }
