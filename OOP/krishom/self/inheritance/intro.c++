@@ -39,6 +39,6 @@ int main()
     Child obj;
 
     obj.showData();//accessing the base class member function
-    
+    obj.print();// also the child member functions
     return 0;
 }
