@@ -14,8 +14,11 @@ class Time{
         }
 
         Time(int t){
-            hours = t/60;
-            min = t/60;
+            hours = (float)t/ (60*60);
+            cout <<"hours: " << hours<< endl;
+            min = (float)(t%3600)/60;//first, find the remainder seconds after 
+            //  calculating hours, then 
+            // those seconds to minutes
         }
 
 
@@ -32,6 +35,7 @@ class Time{
         cout << hours << endl << min;
     }
 };
+
 int main(){
     Time t1;
     int dur = 95; 
@@ -49,9 +53,9 @@ int main(){
     Time t4(10000.34);
     int val = t4;// the data conversion occurs in this line 
     // the overloaded conversion operator gets called and implicitly converts the data
-    cout << val  << '\n';
+    // cout << val  << '\n';
     string str = t4;
-    cout << str;
+    // cout << str;
 
 return 0;
 }
