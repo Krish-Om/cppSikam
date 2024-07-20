@@ -48,7 +48,5 @@ int main()
     //givess error
     // privat.displayFromPubliMode();
     // privat.public_var
-
-
     return 0;
 }
