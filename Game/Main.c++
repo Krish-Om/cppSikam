@@ -19,7 +19,7 @@ class Choices {
 private:
     int states; // rock = 1 scissor = 2 paper = 3
 
-protected:
+public:
     void setState(int state) {
         states = state;
     }
@@ -28,14 +28,13 @@ protected:
         return states;
     }
 
-public:
     static void choiceInfo() {
-        cout << "\t\t\t\tEnter a choice between 1 and 2" << endl;
-        cout << "\t\t\t\t----------------------------------------------------------------------------------------"
+        cout << "Enter a choice between 1 and 2" << endl;
+        cout << "----------------------------------------------------------------------------------------"
              << endl
-             << "\t\t\t\t1. Rock 2. Paper 3. Scissor" << setw(10) << endl
-             << "\t\t\t\t0. Exit the Program" << endl;
-        cout << "\t\t\t\t-----------------------------------------------------------------------------------------"
+             << "1. Rock 2. Paper 3. Scissor" << setw(10) << endl
+             << "0. Exit the Program" << endl;
+        cout << "-----------------------------------------------------------------------------------------"
              << endl;
     }
 
@@ -43,40 +42,58 @@ public:
     }
 };
 
-class Player : private Choices {
+class Player : public Choices {
 public:
 
-    Player() =default;
+    Player() = default;
 
     void takeInput() {
-        int ch=0;
-        cout <<"Enter your choice : \n"<<endl;
-        cin >> setw(1)>>ch;
+        int ch = 0;
+        static int i=1;
+        cout << "Enter your choice p"<<i<<": \n" << endl;
+        cin >> setw(1) >> ch;
         setState(ch);
+        i++;
     }
 
-    bool operator=(Player &p) {
-        return p.getState() == this->getState();
-    }
-
-    ~Player()=default;
+    ~Player() = default;
 
 };
 
-void decision() {
+void p1Wins() {
+    cout << "Player 1 wins !" << endl;
+}
 
+void compare(Player &p1, Player &p2) {
+
+    // rock = 1 scissor = 2 paper = 3
+
+    if (p1.getState() == p2.getState()) {
+        cout << " Draw !" << endl;
+    }
+    if (p1.getState() == 2 && p2.getState() == 3) {
+        p1Wins();
+    }
+    if (p1.getState() == 1 && p2.getState() == 2) {
+        p1Wins();
+    }
+    if (p1.getState() == 3 && p2.getState() == 1) {
+        p1Wins();
+    }
 }
 
 class Game {
-private:
 public:
     Player p1, p2;
 
     Game() {
+        Choices :: choiceInfo();
         p1.takeInput();
-        decision();
-        sleep(0.5);
+        clearScreen();
+        Choices :: choiceInfo();
         p2.takeInput();
+        
+        compare(p1, p2);
     }
 };
 
