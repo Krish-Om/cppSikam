@@ -26,7 +26,7 @@ public:
     Gram(float wt) { weight = wt; }
     Gram(Tola& t)
     {
-        weight = static_cast<float>(t.getWeight() / 11.664);
+        weight = static_cast<float>(t.getWeight() * 11.664);
     }
 
     void showWeight()

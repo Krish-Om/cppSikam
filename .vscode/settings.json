@@ -92,5 +92,6 @@
         "valarray": "cpp",
         "variant": "cpp"
     },
-    "gitdoc.enabled": true
+    "gitdoc.enabled": true,
+    "cmake.sourceDirectory": "/home/krishom/Workspace/collab/Game"
 }
