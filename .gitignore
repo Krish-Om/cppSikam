@@ -3,5 +3,5 @@
 *.o
 *.so
 .idea
-.cmake-build-debug
 bin/
+build/
