@@ -10,16 +10,27 @@ class A{
 };
 
 //simple or single inheritance
-class B : public A{
+class U{
+
+};
+class B :public U{
     public:
         void sayHelloB(){
             cout <<"Class B" <<endl;
         }
 };
 
+
+class C : public A,public B{ //Multiple Inheritance
+
+};
 int main(){
     B b;
-    b.sayHelloA();
+    // b.sayHelloA();
     b.sayHelloB();
+
+    C c;
+    c.sayHelloB();
+    c.sayHelloA();
 return 0;
 }
