@@ -4,9 +4,6 @@
 #define PLAYERS_H
 
 #include<iostream>
-
-
-#include<unistd.h>
 #include<iomanip>
 
 using namespace std;
@@ -32,11 +29,10 @@ public:
     virtual void setChoice()=0;
 
     static void choiceInfo() {
-        cout << "Enter a choice :" << endl;
+        cout << "\nEnter a choice :" << endl;
         cout << "----------------------------------------------------------------------------------------"
              << endl
-             << "1.Rock 2.Paper 3.Scissor" << setw(10) << endl
-             << "0. Exit the Program" << endl;
+             << "1.Rock🪨 2.Paper🧻 3.Scissor✂️" << setw(10) << endl;
         cout << "-----------------------------------------------------------------------------------------"
              << endl;
     }

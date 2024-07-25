@@ -1,3 +1,0 @@
-/home/krishom/Workspace/collab/build/CMakeFiles/Game.dir
-/home/krishom/Workspace/collab/build/CMakeFiles/edit_cache.dir
-/home/krishom/Workspace/collab/build/CMakeFiles/rebuild_cache.dir

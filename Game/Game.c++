@@ -2,7 +2,6 @@
 
 #include "User_Player.c++"
 #include "Bot.c++"
-
 using namespace std;
 
 void clearScreen()
@@ -16,7 +15,7 @@ void clearScreen()
         cerr << " No terminal detected " << endl;
     }
 }
-void init();
+void roundWinner(int, int);
 class Game
 {
 private:
@@ -24,36 +23,155 @@ private:
     User_Player player;
     Bot bot;
 
+    void singlePlayer();
+    void modeSelection();
+    void roundSelection();
+    void defaultPlay();
+    void startGame();
+    void Outro(int);
+    void playAgain();
+
 public:
-
-    Game(){
-        playRound();
+    Game()
+    { // default best of 3 mode
+        init();
     }
-
-    Game(User_Player& p, Bot& b)
+    Game(User_Player &p, Bot &b)
     {
         this->player = p;
         this->bot = b;
-        rounds = 1;
+        rounds = 3;
     }
 
-    void playRound()
+    void init()
     {
-        Players ::choiceInfo();
+        modeSelection();
+    }
+};
+
+void Game::modeSelection()
+{
+    int mode;
+    cout << "Please select your mode :" << endl;
+    cout << "0. Player vs Bot\t 1. Player vs Player" << endl;
+    cin >> mode;
+    if (mode == 0 || mode == 1)
+    {
+
+        switch (mode)
+        {
+        case 0:
+            // singleplayer mode
+            this->singlePlayer();
+            break;
+        case 1:
+            // multiplayer mode
+            break;
+        default:
+            cout << "⚠️⚠️⚠️ Input Error : Invalid mode selected ⚠️⚠️⚠️" << endl;
+            cout << "Please re-enter the mode: " << endl;
+            cin >> mode;
+            break;
+        }
+    }
+}
+
+void Game::roundSelection()
+{
+    clearScreen();
+    int rmode;
+    cout << "Please choose the round-mode you want to play:\n 1.Default(Best of 3 rounds)\t 2.Custom no. of rounds" << endl;
+    cin >> rmode;
+    switch (rmode)
+    {
+    case 1:
+        defaultPlay();
+        break;
+    case 2:
+        // customized no of rounds
+        cout << "Please enter the number of rounds you want to play :" << endl;
+        cin >> this->rounds;
+        if (this->rounds < 1)
+        {
+            cout << "Error : User Input for rounds may have been less than 1 or negative!!! " << endl;
+            cout << "Please re-enter the number of rounds you want to play :" << endl;
+            cin >> this->rounds;
+            break;
+        }
+        else
+            break;
+    default:
+        cerr << "Invalid User Choice" << endl;
+        cout << "Please re-choose the round mode correctly !" << endl;
+        cin >> rmode;
+        break;
+    }
+}
+
+void Game ::defaultPlay()
+{
+    this->rounds = 3;
+    this->startGame();
+}
+
+void Game ::singlePlayer()
+{
+    this->roundSelection(); // rounds = 3
+    this->startGame();
+}
+void Game ::startGame()
+{
+    int i;
+    for (i = 0; i < this->rounds; i++)
+    {
+        Players::choiceInfo();
         player.setChoice();
-        // clearScreen();
+        clearScreen();
         bot.setChoice();
 
         int result = player.compare(bot);
-        if (result == 0)
-           cout << " :0 It's a Draw! :0" << endl;
-       else if (result == 1)
-           cout << ":) Congratulation! You are the final winner! :)" << endl;
-       else
-           cout << ":( Computer is the final winner! and You lose :(" << endl;
+        roundWinner(result, i);
     }
-
-};
-
-
-
+    this->Outro(i);
+}
+void roundWinner(int res, int nround)
+{
+    if (res == 0)
+        cout << " 😅 Round " << nround + 1 << ": is Draw!" << endl;
+    else if (res == 1)
+        cout
+            << "🤩 Round " << nround + 1 << ": you won!" << endl;
+    else
+        cout << "🥲 Round " << nround + 1 << ": you lose!" << endl;
+    
+}
+void Game::Outro(int nround)
+{
+    if (nround == this->rounds)
+    {
+        
+        this->playAgain();
+    }
+    else
+    {
+        cout << "😇😇😇 Thank you for Playing! Hope you enjoyed it. 😇😇😇" << endl;
+        exit(0);
+    }
+}
+void Game::playAgain()
+{
+    clearScreen();
+    cout << "Would like to give an another go ?😁😁😁" << endl;
+    cout << "yes(y) or anyother character" << endl;
+    char ch;
+    cin >> ch;
+    if (ch == 'y')
+    {
+        new Game();
+    }
+    else
+    {
+        cout << "😇😇😇 Thank you for Playing! Hope you enjoyed it. 😇😇😇" << endl;
+        exit(0);
+    }
+}

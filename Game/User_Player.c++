@@ -12,7 +12,7 @@ public:
     User_Player() {}
     void setChoice() override
     {
-        int ch = 0;
+        int ch;
         // static int i = 1;
         cout << "Enter your choice player: \n"
              << endl;
@@ -22,16 +22,16 @@ public:
         switch (ch)
         {
         case 1:
-            cout << "You chose rock " << endl;
+            cout << "You chose rock🪨 " << endl;
             break;
         case 2:
-            cout << "You chose paper " << endl;
+            cout << "You chose paper🧻 " << endl;
             break;
         case 3:
-            cout << "You chose scissor " << endl;
+            cout << "You chose scissor✂️ " << endl;
             break;
         default:
-            cerr << "Error : Input Stream error " << endl;
+            cerr << "Error :⚠️⚠️⚠️ Input Stream error ⚠️⚠️⚠️" << endl;
         }
 
         sleep(1);
