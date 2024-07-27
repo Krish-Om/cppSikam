@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-#include "Bot.hpp"
+#include "../headers/Bot.hpp"
 
 
 void Bot::setChoice()
