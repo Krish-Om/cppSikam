@@ -29,7 +29,18 @@ void scoreBoard(User_Player& p1, User_Player& p2) {
     cout << "\n\nPlayer 1 Score : " << p1.getScore() << endl;
     cout << "\n\nPlayer 2 Score : " << p2.getScore() << endl;
 }
+void comparingScores() {
+    cout << "Comparing scores";
+    cout.flush(); // Ensure the initial message is printed immediately
 
+    for (int i = 0; i < 10; ++i) { // Adjust the loop count for desired loading bar length
+        usleep(300000); // 300 milliseconds delay
+        cout << ".";
+        cout.flush(); // Ensure each dot is printed immediately
+    }
+
+    clearScreen();
+}
 void scoreBoard(User_Player& p1, Bot& p2) {
     cout << "\n\nPlayer Score : " << p1.getScore() << endl;
     cout << "\n\nBot Score : " << p2.getScore() << endl;
@@ -184,6 +195,7 @@ void Game::playAgain() {
 }
 
 void Game::determineWinner(User_Player player, Bot bot) {
+    comparingScores();
     if ((player == bot))
         cout << "\n\n 🙃🙃🙃 It's a draw! 🙃🙃🙃 \n\n" << endl;
     else if (player.getScore() > bot.getScore()) {
@@ -193,6 +205,7 @@ void Game::determineWinner(User_Player player, Bot bot) {
     }
 }
 void Game::determineWinner(User_Player player1, User_Player player2) {
+    comparingScores();
     if (player1== player2)
         cout << " \n\n 🤔🤔🤔 It's a draw 🤔🤔🤔 \n\n" << endl;
     else if (player1>player2) {

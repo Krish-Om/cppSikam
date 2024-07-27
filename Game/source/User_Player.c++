@@ -8,7 +8,7 @@ using namespace std;
 void User_Player::setChoice() {
     int ch;
     bool valid = false;
-    static int i = 0;
+     static int i = 0;
        if (i == 1)
         ++i;
     else
