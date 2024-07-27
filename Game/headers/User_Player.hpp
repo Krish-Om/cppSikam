@@ -7,7 +7,7 @@
 
 #include "Players.hpp"
 
-class User_Player : public Players {
+class User_Player : virtual public Players{
 public:
     User_Player();
 
@@ -15,6 +15,7 @@ public:
 
 //    void roundWinner(User_Player& p1, User_Player& p2);
     ~User_Player();
+
 };
 
 #endif //GAME_USER_PLAYER_HPP

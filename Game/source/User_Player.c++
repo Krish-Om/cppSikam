@@ -37,5 +37,5 @@ using namespace std;
     }
 
 
-User_Player::User_Player() {}
-User_Player::~User_Player() {}
+User_Player::User_Player() = default;
+User_Player::~User_Player() = default;

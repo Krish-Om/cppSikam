@@ -4,7 +4,7 @@
 #ifndef GAME_BOT_HPP
 #define GAME_BOT_HPP
 #include "Players.hpp"
-class Bot : public Players{
+class Bot : virtual public Players{
 public:
     Bot();
     void setChoice() override;

@@ -1,8 +1,8 @@
 #include <iostream>
 #include "unistd.h"
-#include "Game.hpp"
-#include "User_Player.hpp"
-#include "Bot.hpp"
+#include "../headers/Game.hpp"
+#include "../headers/User_Player.hpp"
+#include "../headers/Bot.hpp"
 
 
 using namespace std;
