@@ -1,4 +1,5 @@
-#include "Game.c++"
+#include "Game.hpp"
+#include "iostream"
 using namespace std;
 void start();
 void intro();
