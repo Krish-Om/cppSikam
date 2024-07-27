@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/krishom/Workspace/collab/Game/cmake-build-debug"
+			"value" : "/home/krishom/Workspace/collab/RPSGame/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -543,7 +543,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/krishom/Workspace/collab/Game/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/krishom/Workspace/collab/RPSGame/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -603,7 +603,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/krishom/Workspace/collab/Game"
+			"value" : "/home/krishom/Workspace/collab/RPSGame"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1151,7 +1151,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/krishom/Workspace/collab/Game/cmake-build-debug"
+			"value" : "/home/krishom/Workspace/collab/RPSGame/cmake-build-debug"
 		},
 		{
 			"name" : "Game_IS_TOP_LEVEL",
@@ -1175,7 +1175,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/krishom/Workspace/collab/Game"
+			"value" : "/home/krishom/Workspace/collab/RPSGame"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",
@@ -1188,18 +1188,6 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "TRUE"
-		},
-		{
-			"name" : "raylib_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "The directory containing a CMake configuration file for raylib."
-				}
-			],
-			"type" : "PATH",
-			"value" : "raylib_DIR-NOTFOUND"
 		}
 	],
 	"kind" : "cache",

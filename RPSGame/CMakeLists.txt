@@ -4,7 +4,7 @@ project(Game)
 set(CMAKE_CXX_STANDARD 14)
 include_directories(headers)
 
-add_executable(Game
+add_executable(RPSGame
         headers/Bot.hpp
         headers/Game.hpp
         headers/Players.hpp

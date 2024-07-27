@@ -1,4 +1,4 @@
-# Install script for directory: /home/krishom/Workspace/collab/Game
+# Install script for directory: /home/krishom/Workspace/collab/RPSGame
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/krishom/Workspace/collab/Game/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/krishom/Workspace/collab/RPSGame/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
