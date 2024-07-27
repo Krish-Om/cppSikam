@@ -12,14 +12,18 @@ enum userChoice {
 class Players {
 private:
     unsigned int choice;
+protected:
+    unsigned int score;
 public:
     Players();
-    void setState(unsigned int ch);
-    int getState();
+    void setState(unsigned int);
+    int getScore();
+    void operator++();
+    bool operator ==(Players&);
+    bool operator >(Players&);
     virtual void setChoice() = 0;
     static void choiceInfo();
-    int compare(Players &p2);
-    static void determineWinner(Players &p1, Players &b);
+    int compare(Players&);
     virtual ~Players();
 };
 

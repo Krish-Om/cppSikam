@@ -1,10 +1,14 @@
 #include <iostream>
+#include <csignal>
+
 using namespace std;
-#include "../headers/Bot.hpp"
+#include "Bot.hpp"
 
 
 void Bot::setChoice()
 {
+    cout << "Bot is choosing..." << endl;
+    sleep(1);
     int n = rand() % 100; // generates random value from 0 to 100
     if (n >= 0 && n < 40)
     {
@@ -23,5 +27,9 @@ void Bot::setChoice()
     }
 }
 
-Bot::Bot() {}
-Bot :: ~Bot(){}
+void Bot::setScore() {
+    this->score++;
+}
+
+Bot::Bot() = default;
+Bot :: ~Bot()= default;

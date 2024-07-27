@@ -8,6 +8,8 @@ class Bot : virtual public Players{
 public:
     Bot();
     void setChoice() override;
-    ~Bot();
+    ~Bot() override;
+
+    void setScore();
 };
 #endif //GAME_BOT_HPP

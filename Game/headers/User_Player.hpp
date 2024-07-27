@@ -10,11 +10,9 @@
 class User_Player : virtual public Players{
 public:
     User_Player();
-
     void setChoice() override;
-
-//    void roundWinner(User_Player& p1, User_Player& p2);
-    ~User_Player();
+    static void roundWinner(int result, int i,User_Player&,User_Player&);
+    ~User_Player() override;
 
 };
 
