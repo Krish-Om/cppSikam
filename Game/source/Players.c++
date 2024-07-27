@@ -10,14 +10,12 @@ using namespace std;
 // rock = 1 paper = 2 scissor = 3
 
 
-    Players :: Players(){}
+    Players :: Players(){
+        this->score = 0;
+    }
 
     void Players :: setState(unsigned int ch) {
         this->choice = ch;
-    }
-
-    int Players :: getState() {
-        return this->choice;
     }
 
      void Players :: choiceInfo() {
@@ -34,24 +32,33 @@ using namespace std;
             return 0;
         else if ((this->choice == ROCK && p2.choice == SCISSOR) ||
                  (this->choice == PAPER && p2.choice == ROCK) ||
-                 (this->choice == SCISSOR && p2.choice == ROCK))
+                 (this->choice == SCISSOR && p2.choice == ROCK)) {
             return 1;
-        else
+        }else{
             return -1;
-    }
-
-
-   void Players ::  determineWinner(Players &p1, Players& b) {
-        if ((p1.compare(b) == 0))
-            cout << "It's a draw" << endl;
-        else if (p1.compare(b)== 1) {
-            cout << "Player wins!" << endl;
-        } else {
-            cout << "Bot wins!" << endl;
         }
     }
-
     Players::~Players(){}
+
+int Players::getScore() {
+    return this->score;
+}
+
+void Players::operator++() {
+    ++this->score;
+}
+
+bool Players::operator==(Players &p) {
+    return (this->score == p.score);
+}
+
+bool Players::operator>(Players &p) {
+    return (this->score > p.score);
+}
+
+
+
+
 
 
 

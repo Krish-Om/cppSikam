@@ -2,7 +2,6 @@ cmake_minimum_required(VERSION 3.28)
 project(Game)
 
 set(CMAKE_CXX_STANDARD 14)
-
 include_directories(headers)
 
 add_executable(Game
@@ -14,4 +13,6 @@ add_executable(Game
         source/Game.c++
         source/Players.c++
         source/User_Player.c++
-        Main.c++)
+        Main.c++
+        headers/Main.hpp
+)
