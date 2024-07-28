@@ -19,10 +19,8 @@ class FinalDervied : public Derived1, public Derived2
 
 int main(){
 
-    //Ambiguity  : having data members and member function with same name
-
     //Solution 2 : Using virtual base class
-    // this ensures that the base class is inherited only once throught 
+    // this ensures that the base class is inherited only once throughout 
     // the inheritance hierarchy
 
     FinalDervied d;

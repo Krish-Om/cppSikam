@@ -17,7 +17,7 @@ class Child : public Parent{
     public:
         void print(){
             cout << " Derived class :: print() " << endl; // hides the base class print() in compile time
-            Parent :: print();
+            // Parent :: print();
         }
     
         void print1() override
@@ -29,14 +29,22 @@ class Child : public Parent{
 
 int main(){
     Child ch;
-
+    //compile time or early biniding
     ch.print();
-    ch.print1();
+    // ch.print1();
 
+    // //using child object to call parent's functions
+    // ch.Parent :: print1();
+    // ch.Parent :: print();
 
-    //using child object to call parent's functions
-    ch.Parent :: print1();
-    ch.Parent :: print();
+    // Runtime or latebiniding
+    Parent* parent_ptr;
+    Child child;
+
+    parent_ptr = &child;
+
+    parent_ptr->print1();
+
 
 return 0;
 }
