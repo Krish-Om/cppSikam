@@ -44,7 +44,5 @@ int main(){
     parent_ptr = &child;
 
     parent_ptr->print1();
-
-
 return 0;
 }
