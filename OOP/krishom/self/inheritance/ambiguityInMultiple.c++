@@ -5,6 +5,9 @@ using namespace std;
 class Base {
         int a;
     public:
+        Base(){
+            cout<< "Constructor Base called " << endl;
+        }
         void foo(){
             cout<< "Base " << endl;
         }
@@ -35,7 +38,7 @@ int main(){
     // obj.foo();// this will give error
     
     //resolved using scope resolution operator (::)
-    obj.Derived1 :: foo(); //calls Derive1 func
+    // obj.Derived1 :: foo(); //calls Derive1 func
     obj.Derived2 :: foo();//calls Derived2 func    
 return 0;
 }

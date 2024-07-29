@@ -28,9 +28,9 @@ class Child : public Parent{
 
 
 int main(){
-    Child ch;
+    // Child ch;
     //compile time or early biniding
-    ch.print();
+    // ch.print();
     // ch.print1();
 
     // //using child object to call parent's functions
@@ -38,11 +38,12 @@ int main(){
     // ch.Parent :: print();
 
     // Runtime or latebiniding
+    //In runtime it looks for what type of object's address is stored in the pointer variable.
     Parent* parent_ptr;
     Child child;
 
     parent_ptr = &child;
 
-    parent_ptr->print1();
+    parent_ptr->print();
 return 0;
 }
