@@ -1,3 +1,0 @@
-/home/krishom/Workspace/collab/RPSGame/cmake-build-debug/CMakeFiles/RPSGame.dir
-/home/krishom/Workspace/collab/RPSGame/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/krishom/Workspace/collab/RPSGame/cmake-build-debug/CMakeFiles/rebuild_cache.dir
