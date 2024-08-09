@@ -7,7 +7,7 @@ class Base {
         int a;
     public:
         Base(){}
-        Base(Base& b){
+        Base(const Base& b){
             this->a =b.a;
         }
         Base(int n){a = n;}
