@@ -8,7 +8,8 @@ class container {
         T remove(){}
 };
 
-template <typename T> //templates inheritance
+ //templates inheritance
+template <typename T>//must define this line explicitly
 class Stack: public container<T>{
     public:
         void push (T item) {
