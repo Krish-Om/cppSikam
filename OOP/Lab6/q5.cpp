@@ -1,36 +1,19 @@
 #include <iostream>
 #include <stdexcept>
 
-using namespace std;
-
-int main()
-{
-    try
-    {
-        int n1, n2;
-        cout << "Enter any two integers: " << endl;
-        cin >> n1 >> n2;
-
-        if (n2 == 0)
-        {
-            throw runtime_error("Division by 0 error");
+int divide(int a, int b) {
+    if (b == 0) {
+        throw std::invalid_argument("Division by zero is not allowed");
         }
+    return a / b;
+}
 
-        int res = n1 / n2;
-        cout << "Res: " << res << endl;
-
-        string str = "1234abcdef";
-        for (char c : str)
-        {
-            if (!isdigit(c))
-            {
-                throw invalid_argument("Invalid character in string");
-            }
-        }
-    }
-    catch (const exception& e)
-    {
-        cerr << e.what() << '\n';
+int main() {
+    try {
+        int result = divide(10, 0);
+        std::cout << "Result: " << result << std::endl;
+    } catch (const std::exception& e) {
+        std::cout << "Exception caught: " << e.what() << std::endl;
     }
 
     return 0;
